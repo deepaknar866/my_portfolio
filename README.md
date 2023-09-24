@@ -10,7 +10,7 @@ This is a simple portfolio website created using HTML and CSS. It showcases my p
 - [Usage](#usage)
 - [Customization](#customization)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Demo
 
