@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>my portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f811341908.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+     <div class="container"> 
+        <nav>
+            <h1>Port<span>folio</span></h1>    
+            <ul id="sidebar">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div><i class="fa-solid fa-circle-xmark" onclick="closeTab()"></i></div>
+            </ul>
+            <div><i class="fa-solid fa-bars" onclick="openTab()"></i></div>
+        </nav>
+     </div>
+    </div>
+    <div class="title">
+        <h1> Hello, I'm <span>Deepak Narvare</span></h1>
+        <h2>Student of Computer Science....</h2>
+    </div>
+
+   <div id="about">
+    <div class="container2">
+        <h1>About me</h1>
+        <div class="row">
+            <div class="row1">
+                <img src="myimage.jpg">
+            </div>
+            <div class="row2">
+                <p>I am a student of Computer Science and Engineering stream. I have good knowledge about C/C++ programming language with DSA and also know about Frontend development, I have solved 200+ questions on Leetcode. Currently I am working on improving my problem solving skills to give my best.</p>
+                <div class="tab-titles">
+                    <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-link" onclick="opentab('education')">Education</p>
+
+                </div>
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Language : </span> C & C++</li>
+                        <li><span>Concepts : </span> Data Structures and Algorithm</li>
+                        <li><span>DataBase Language: </span> SQL</li>
+                        <li><span>Web Development : </span> HTML, CSS</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>BTech from Shri Ram Group Jabalpur <br></span> 2020-24</li>
+                        <li><span>Higher Secondary <br></span>2019-20</li>
+                        <li><span>High School <br></span>2017-18</li>
+                    
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+   </div>
+
+
+   <div id="portfolio">
+    <div class="container2">
+        <h1>My Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="calculator.jpg" alt="">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>Basic Calculator using HTML CSS and JavaScript.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="digital.jpg" alt="">
+                <div class="layer">
+                    <h3>Digital Clock</h3>
+                    <p>Digital Clock Using HTML CSS and JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <div id="contact">
+      <div class="container2">
+        <div class="row">
+            <div class="row12">
+                <h1> Contact Me</h1>
+                <p><span>Email:</span> deepaknar866@gmail.com</p>
+                <p><span>Phone:</span> 7722875075</p>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/deepak-narvare-20909a255"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                
+                <a href="Deepak_Narvare_Resume23.pdf" download class="btn btn2">Download CV</a> 
+            </div>
+            
+            <div class="row22">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea  name="message" rows="6" placeholder="Write Your Message"></textarea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+      </div>
+   </div>
+<div class="copy">
+    <p> Copyright. <span>by @deepak </span></p>
+</div>
+</body>
+<script>
+    let tablinks= document.getElementsByClassName("tab-link");
+    let tabcontents= document.getElementsByClassName("tab-content");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    let side = document.getElementById("sidebar");
+
+    function openTab(){
+        side.style.right = "0";
+    }
+
+    function closeTab(){
+        side.style.right = "-200px";
+    }
+</script>
+</html>
